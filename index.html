@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<style>
+:root {
+  --primary: #1e88e5;
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --border: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  background: var(--bg);
+}
+
+header {
+  margin-bottom: 16px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #222;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px 12px;
+  background: var(--card);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: #222;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.card:active {
+  transform: scale(0.97);
+}
+
+.card:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.icon {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.name {
+  font-size: 14px;
+  word-break: break-word;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 24px;
+  }
+}
+</style>
+</head>
+
+<body>
+  <header>
+    <h2>.</h2>
+  </header>
+
+  <div class="grid">
+    
+        <a class="card" href="index.js">
+          <div class="icon">📄</div>
+          <div class="name">index.js</div>
+        </a>
+      
+        <a class="card" href="Start Here/">
+          <div class="icon">📁</div>
+          <div class="name">Start Here</div>
+        </a>
+      
+        <a class="card" href="Year 1/">
+          <div class="icon">📁</div>
+          <div class="name">Year 1</div>
+        </a>
+      
+        <a class="card" href="Year 2/">
+          <div class="icon">📁</div>
+          <div class="name">Year 2</div>
+        </a>
+      
+        <a class="card" href="Year 3/">
+          <div class="icon">📁</div>
+          <div class="name">Year 3</div>
+        </a>
+      
+        <a class="card" href="Year 4/">
+          <div class="icon">📁</div>
+          <div class="name">Year 4</div>
+        </a>
+      
+  </div>
+</body>
+</html>
