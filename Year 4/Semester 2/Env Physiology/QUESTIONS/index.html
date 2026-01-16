@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>QUESTIONS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<style>
+:root {
+  --primary: #1e88e5;
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --border: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  background: var(--bg);
+}
+
+header {
+  margin-bottom: 16px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #222;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px 12px;
+  background: var(--card);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: #222;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.card:active {
+  transform: scale(0.97);
+}
+
+.card:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.icon {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.name {
+  font-size: 14px;
+  word-break: break-word;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 24px;
+  }
+}
+</style>
+</head>
+
+<body>
+  <header>
+    <h2>QUESTIONS</h2>
+  </header>
+
+  <div class="grid">
+    
+        <a class="card" href="006708286_1-fa7355d2081ccd803c28338245c7d9a3-768x994.png">
+          <div class="icon">📄</div>
+          <div class="name">006708286_1-fa7355d2081ccd803c28338245c7d9a3-768x994.png</div>
+        </a>
+      
+        <a class="card" href="Env Physiology Midsem.docx">
+          <div class="icon">📄</div>
+          <div class="name">Env Physiology Midsem.docx</div>
+        </a>
+      
+        <a class="card" href="image (1).png">
+          <div class="icon">📄</div>
+          <div class="name">image (1).png</div>
+        </a>
+      
+        <a class="card" href="image.png">
+          <div class="icon">📄</div>
+          <div class="name">image.png</div>
+        </a>
+      
+        <a class="card" href="media_9c3_9c355c14-e457-4f84-bef5-84fe674fab32_image.png">
+          <div class="icon">📄</div>
+          <div class="name">media_9c3_9c355c14-e457-4f84-bef5-84fe674fab32_image.png</div>
+        </a>
+      
+        <a class="card" href="media_f88_f88a06bb-3186-4ceb-944b-db49b53a0239_image.png">
+          <div class="icon">📄</div>
+          <div class="name">media_f88_f88a06bb-3186-4ceb-944b-db49b53a0239_image.png</div>
+        </a>
+      
+        <a class="card" href="Quiz 1.pdf">
+          <div class="icon">📄</div>
+          <div class="name">Quiz 1.pdf</div>
+        </a>
+      
+  </div>
+</body>
+</html>
