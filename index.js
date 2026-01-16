@@ -93,6 +93,8 @@ body {
   padding: 12px;
   font-family: system-ui, -apple-system;
   background: var(--bg);
+  padding-bottom: 24px; /* extra bottom space so last item is visible */
+  margin: 0 0 30px;
 }
 
 h2 {
@@ -102,15 +104,17 @@ h2 {
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
   gap: 8px;
+    margin: 0 0 30px;
 }
 
-/* Mobile list layout */
+/* Cards */
 .card {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 12px;
+  text-align: center;
   padding: 12px 14px;
   background: var(--card);
   border: 1px solid var(--border);
@@ -124,8 +128,8 @@ h2 {
 }
 
 .icon {
-  font-size: 24px;
-  flex-shrink: 0;
+  font-size: 36px;
+  margin-bottom: 6px;
 }
 
 .name {
@@ -133,7 +137,7 @@ h2 {
   word-break: break-word;
 }
 
-/* Grid cards on larger screens */
+/* Larger screens */
 @media (min-width: 640px) {
   body { padding: 20px; }
 
@@ -143,14 +147,11 @@ h2 {
   }
 
   .card {
-    flex-direction: column;
-    text-align: center;
     padding: 16px 12px;
   }
 
   .icon {
     font-size: 36px;
-    margin-bottom: 6px;
   }
 }
 </style>
