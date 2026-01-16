@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,211 +7,185 @@
 
 <style>
 :root {
-  --primary: #1e88e5;
   --bg: #f6f8fa;
   --card: #ffffff;
   --border: #e0e0e0;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
-  padding: 16px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  padding: 12px;
+  font-family: system-ui, -apple-system;
   background: var(--bg);
 }
 
-header {
-  margin-bottom: 16px;
-}
-
 h2 {
-  margin: 0;
-  font-size: 20px;
-  color: #222;
+  margin: 0 0 12px;
+  font-size: 18px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 12px;
+  grid-template-columns: 1fr;
+  gap: 8px;
 }
 
+/* Mobile list layout */
 .card {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-  padding: 16px 12px;
+  gap: 12px;
+  padding: 12px 14px;
   background: var(--card);
-  border-radius: 12px;
   border: 1px solid var(--border);
+  border-radius: 10px;
   text-decoration: none;
   color: #222;
-  transition: transform .15s ease, box-shadow .15s ease;
 }
 
 .card:active {
-  transform: scale(0.97);
-}
-
-.card:hover {
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  background: #f0f0f0;
 }
 
 .icon {
-  font-size: 36px;
-  margin-bottom: 8px;
+  font-size: 24px;
+  flex-shrink: 0;
 }
 
 .name {
-  font-size: 14px;
+  font-size: 15px;
   word-break: break-word;
 }
 
-@media (min-width: 768px) {
-  body {
-    padding: 24px;
+/* Grid cards on larger screens */
+@media (min-width: 640px) {
+  body { padding: 20px; }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+  }
+
+  .card {
+    flex-direction: column;
+    text-align: center;
+    padding: 16px 12px;
+  }
+
+  .icon {
+    font-size: 36px;
+    margin-bottom: 6px;
   }
 }
 </style>
 </head>
 
 <body>
-  <header>
-    <h2>Seminars</h2>
-  </header>
-
+  <h2>Seminars</h2>
   <div class="grid">
     
-        <a class="card" href="1.0 The Menace of Small-Scale Illegal Mining in Ghana.pptx">
-          <div class="icon">📄</div>
-          <div class="name">1.0 The Menace of Small-Scale Illegal Mining in Ghana.pptx</div>
-        </a>
-      
-        <a class="card" href="A and S-1.pptx">
-          <div class="icon">📄</div>
-          <div class="name">A and S-1.pptx</div>
-        </a>
-      
-        <a class="card" href="BIODIVERSITTY_GROUP 25-1.pptx">
-          <div class="icon">📄</div>
-          <div class="name">BIODIVERSITTY_GROUP 25-1.pptx</div>
-        </a>
-      
-        <a class="card" href="Biodiversity Group 22.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Biodiversity Group 22.pptx</div>
-        </a>
-      
-        <a class="card" href="biodiversity group 23 fin..pptx">
-          <div class="icon">📄</div>
-          <div class="name">biodiversity group 23 fin..pptx</div>
-        </a>
-      
-        <a class="card" href="Biodiversity Group 4.....THE SIXTH MASS EXTINCTION.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Biodiversity Group 4.....THE SIXTH MASS EXTINCTION.pptx</div>
-        </a>
-      
-        <a class="card" href="Biodiversity Seminar (Topic 2).pptx">
-          <div class="icon">📄</div>
-          <div class="name">Biodiversity Seminar (Topic 2).pptx</div>
-        </a>
-      
-        <a class="card" href="BIODIVERSITY_GROUP_18[1].pptx">
-          <div class="icon">📄</div>
-          <div class="name">BIODIVERSITY_GROUP_18[1].pptx</div>
-        </a>
-      
-        <a class="card" href="CLIMATE CHANGE AND GLOBAL BIODIVERSITY.pptx">
-          <div class="icon">📄</div>
-          <div class="name">CLIMATE CHANGE AND GLOBAL BIODIVERSITY.pptx</div>
-        </a>
-      
-        <a class="card" href="coral-2.pptx">
-          <div class="icon">📄</div>
-          <div class="name">coral-2.pptx</div>
-        </a>
-      
-        <a class="card" href="EXOTIC_SPECIES_AND__BIODIVERSITY_LOSS[1].pptx">
-          <div class="icon">📄</div>
-          <div class="name">EXOTIC_SPECIES_AND__BIODIVERSITY_LOSS[1].pptx</div>
-        </a>
-      
-        <a class="card" href="GROUP 11- - HOW DOES BIODIVERSITY KEEP THE EARTH ALIVE.pdf">
-          <div class="icon">📄</div>
-          <div class="name">GROUP 11- - HOW DOES BIODIVERSITY KEEP THE EARTH ALIVE.pdf</div>
-        </a>
-      
-        <a class="card" href="GROUP 12(TOPIC 7).pptx">
-          <div class="icon">📄</div>
-          <div class="name">GROUP 12(TOPIC 7).pptx</div>
-        </a>
-      
-        <a class="card" href="GROUP 19 BIODIVERSITY.pptx">
-          <div class="icon">📄</div>
-          <div class="name">GROUP 19 BIODIVERSITY.pptx</div>
-        </a>
-      
-        <a class="card" href="group 21 biodiversity-2.pptx">
-          <div class="icon">📄</div>
-          <div class="name">group 21 biodiversity-2.pptx</div>
-        </a>
-      
-        <a class="card" href="GROUP15 - TOPIC5.pptx">
-          <div class="icon">📄</div>
-          <div class="name">GROUP15 - TOPIC5.pptx</div>
-        </a>
-      
-        <a class="card" href="IMPACT OF URBANIZATION ON BIODIVERSITY group 1.pptx">
-          <div class="icon">📄</div>
-          <div class="name">IMPACT OF URBANIZATION ON BIODIVERSITY group 1.pptx</div>
-        </a>
-      
-        <a class="card" href="INTEGRATING CONSERVATION WITH DEVELOPMENT copy copy.pptx">
-          <div class="icon">📄</div>
-          <div class="name">INTEGRATING CONSERVATION WITH DEVELOPMENT copy copy.pptx</div>
-        </a>
-      
-        <a class="card" href="NATURE BASED SOLUTIONS FOR CLIMATE CHANGE (1).pptx">
-          <div class="icon">📄</div>
-          <div class="name">NATURE BASED SOLUTIONS FOR CLIMATE CHANGE (1).pptx</div>
-        </a>
-      
-        <a class="card" href="POACHING- A THREAT TO BIODIVERSITY (3).pptx">
-          <div class="icon">📄</div>
-          <div class="name">POACHING- A THREAT TO BIODIVERSITY (3).pptx</div>
-        </a>
-      
-        <a class="card" href="POTENTIAL_ENVIRONMENTAL_IMPACTS_OF_THE_EMERGING_OIL_INDUSTRY.pptx">
-          <div class="icon">📄</div>
-          <div class="name">POTENTIAL_ENVIRONMENTAL_IMPACTS_OF_THE_EMERGING_OIL_INDUSTRY.pptx</div>
-        </a>
-      
-        <a class="card" href="STEVENNNNNNJ[1].pptx">
-          <div class="icon">📄</div>
-          <div class="name">STEVENNNNNNJ[1].pptx</div>
-        </a>
-      
-        <a class="card" href="THE IUCN RED LIST.pptx">
-          <div class="icon">📄</div>
-          <div class="name">THE IUCN RED LIST.pptx</div>
-        </a>
-      
-        <a class="card" href="THE NATURAL RESOURCE CURSE AND HUMAN DEPENDENCE ON 2.2.pptx">
-          <div class="icon">📄</div>
-          <div class="name">THE NATURAL RESOURCE CURSE AND HUMAN DEPENDENCE ON 2.2.pptx</div>
-        </a>
-      
-        <a class="card" href="THE TRAGEDY OF THE COMMONS.pptx">
-          <div class="icon">📄</div>
-          <div class="name">THE TRAGEDY OF THE COMMONS.pptx</div>
-        </a>
-      
+<a class="card" href="1.0 The Menace of Small-Scale Illegal Mining in Ghana.pptx">
+  <div class="icon">📙</div>
+  <div class="name">1.0 The Menace of Small-Scale Illegal Mining in Ghana.pptx</div>
+</a>
+<a class="card" href="A and S-1.pptx">
+  <div class="icon">📙</div>
+  <div class="name">A and S-1.pptx</div>
+</a>
+<a class="card" href="BIODIVERSITTY_GROUP 25-1.pptx">
+  <div class="icon">📙</div>
+  <div class="name">BIODIVERSITTY_GROUP 25-1.pptx</div>
+</a>
+<a class="card" href="Biodiversity Group 22.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Biodiversity Group 22.pptx</div>
+</a>
+<a class="card" href="biodiversity group 23 fin..pptx">
+  <div class="icon">📙</div>
+  <div class="name">biodiversity group 23 fin..pptx</div>
+</a>
+<a class="card" href="Biodiversity Group 4.....THE SIXTH MASS EXTINCTION.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Biodiversity Group 4.....THE SIXTH MASS EXTINCTION.pptx</div>
+</a>
+<a class="card" href="Biodiversity Seminar (Topic 2).pptx">
+  <div class="icon">📙</div>
+  <div class="name">Biodiversity Seminar (Topic 2).pptx</div>
+</a>
+<a class="card" href="BIODIVERSITY_GROUP_18[1].pptx">
+  <div class="icon">📙</div>
+  <div class="name">BIODIVERSITY_GROUP_18[1].pptx</div>
+</a>
+<a class="card" href="CLIMATE CHANGE AND GLOBAL BIODIVERSITY.pptx">
+  <div class="icon">📙</div>
+  <div class="name">CLIMATE CHANGE AND GLOBAL BIODIVERSITY.pptx</div>
+</a>
+<a class="card" href="coral-2.pptx">
+  <div class="icon">📙</div>
+  <div class="name">coral-2.pptx</div>
+</a>
+<a class="card" href="EXOTIC_SPECIES_AND__BIODIVERSITY_LOSS[1].pptx">
+  <div class="icon">📙</div>
+  <div class="name">EXOTIC_SPECIES_AND__BIODIVERSITY_LOSS[1].pptx</div>
+</a>
+<a class="card" href="GROUP 11- - HOW DOES BIODIVERSITY KEEP THE EARTH ALIVE.pdf">
+  <div class="icon">📕</div>
+  <div class="name">GROUP 11- - HOW DOES BIODIVERSITY KEEP THE EARTH ALIVE.pdf</div>
+</a>
+<a class="card" href="GROUP 12(TOPIC 7).pptx">
+  <div class="icon">📙</div>
+  <div class="name">GROUP 12(TOPIC 7).pptx</div>
+</a>
+<a class="card" href="GROUP 19 BIODIVERSITY.pptx">
+  <div class="icon">📙</div>
+  <div class="name">GROUP 19 BIODIVERSITY.pptx</div>
+</a>
+<a class="card" href="group 21 biodiversity-2.pptx">
+  <div class="icon">📙</div>
+  <div class="name">group 21 biodiversity-2.pptx</div>
+</a>
+<a class="card" href="GROUP15 - TOPIC5.pptx">
+  <div class="icon">📙</div>
+  <div class="name">GROUP15 - TOPIC5.pptx</div>
+</a>
+<a class="card" href="IMPACT OF URBANIZATION ON BIODIVERSITY group 1.pptx">
+  <div class="icon">📙</div>
+  <div class="name">IMPACT OF URBANIZATION ON BIODIVERSITY group 1.pptx</div>
+</a>
+<a class="card" href="INTEGRATING CONSERVATION WITH DEVELOPMENT copy copy.pptx">
+  <div class="icon">📙</div>
+  <div class="name">INTEGRATING CONSERVATION WITH DEVELOPMENT copy copy.pptx</div>
+</a>
+<a class="card" href="NATURE BASED SOLUTIONS FOR CLIMATE CHANGE (1).pptx">
+  <div class="icon">📙</div>
+  <div class="name">NATURE BASED SOLUTIONS FOR CLIMATE CHANGE (1).pptx</div>
+</a>
+<a class="card" href="POACHING- A THREAT TO BIODIVERSITY (3).pptx">
+  <div class="icon">📙</div>
+  <div class="name">POACHING- A THREAT TO BIODIVERSITY (3).pptx</div>
+</a>
+<a class="card" href="POTENTIAL_ENVIRONMENTAL_IMPACTS_OF_THE_EMERGING_OIL_INDUSTRY.pptx">
+  <div class="icon">📙</div>
+  <div class="name">POTENTIAL_ENVIRONMENTAL_IMPACTS_OF_THE_EMERGING_OIL_INDUSTRY.pptx</div>
+</a>
+<a class="card" href="STEVENNNNNNJ[1].pptx">
+  <div class="icon">📙</div>
+  <div class="name">STEVENNNNNNJ[1].pptx</div>
+</a>
+<a class="card" href="THE IUCN RED LIST.pptx">
+  <div class="icon">📙</div>
+  <div class="name">THE IUCN RED LIST.pptx</div>
+</a>
+<a class="card" href="THE NATURAL RESOURCE CURSE AND HUMAN DEPENDENCE ON 2.2.pptx">
+  <div class="icon">📙</div>
+  <div class="name">THE NATURAL RESOURCE CURSE AND HUMAN DEPENDENCE ON 2.2.pptx</div>
+</a>
+<a class="card" href="THE TRAGEDY OF THE COMMONS.pptx">
+  <div class="icon">📙</div>
+  <div class="name">THE TRAGEDY OF THE COMMONS.pptx</div>
+</a>
   </div>
 </body>
 </html>

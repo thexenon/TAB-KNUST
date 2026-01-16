@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,261 +7,225 @@
 
 <style>
 :root {
-  --primary: #1e88e5;
   --bg: #f6f8fa;
   --card: #ffffff;
   --border: #e0e0e0;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
-  padding: 16px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  padding: 12px;
+  font-family: system-ui, -apple-system;
   background: var(--bg);
 }
 
-header {
-  margin-bottom: 16px;
-}
-
 h2 {
-  margin: 0;
-  font-size: 20px;
-  color: #222;
+  margin: 0 0 12px;
+  font-size: 18px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 12px;
+  grid-template-columns: 1fr;
+  gap: 8px;
 }
 
+/* Mobile list layout */
 .card {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-  padding: 16px 12px;
+  gap: 12px;
+  padding: 12px 14px;
   background: var(--card);
-  border-radius: 12px;
   border: 1px solid var(--border);
+  border-radius: 10px;
   text-decoration: none;
   color: #222;
-  transition: transform .15s ease, box-shadow .15s ease;
 }
 
 .card:active {
-  transform: scale(0.97);
-}
-
-.card:hover {
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  background: #f0f0f0;
 }
 
 .icon {
-  font-size: 36px;
-  margin-bottom: 8px;
+  font-size: 24px;
+  flex-shrink: 0;
 }
 
 .name {
-  font-size: 14px;
+  font-size: 15px;
   word-break: break-word;
 }
 
-@media (min-width: 768px) {
-  body {
-    padding: 24px;
+/* Grid cards on larger screens */
+@media (min-width: 640px) {
+  body { padding: 20px; }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+  }
+
+  .card {
+    flex-direction: column;
+    text-align: center;
+    padding: 16px 12px;
+  }
+
+  .icon {
+    font-size: 36px;
+    margin-bottom: 6px;
   }
 }
 </style>
 </head>
 
 <body>
-  <header>
-    <h2>Past Questions</h2>
-  </header>
-
+  <h2>Past Questions</h2>
   <div class="grid">
     
-        <a class="card" href="1. CHORDATA.pdf">
-          <div class="icon">📄</div>
-          <div class="name">1. CHORDATA.pdf</div>
-        </a>
-      
-        <a class="card" href="2. FISHES.pdf">
-          <div class="icon">📄</div>
-          <div class="name">2. FISHES.pdf</div>
-        </a>
-      
-        <a class="card" href="3. AMPHIBIA.pdf">
-          <div class="icon">📄</div>
-          <div class="name">3. AMPHIBIA.pdf</div>
-        </a>
-      
-        <a class="card" href="4. REPTILIA.pdf">
-          <div class="icon">📄</div>
-          <div class="name">4. REPTILIA.pdf</div>
-        </a>
-      
-        <a class="card" href="5. AVES.pdf">
-          <div class="icon">📄</div>
-          <div class="name">5. AVES.pdf</div>
-        </a>
-      
-        <a class="card" href="6. MAMMALIA.pdf">
-          <div class="icon">📄</div>
-          <div class="name">6. MAMMALIA.pdf</div>
-        </a>
-      
-        <a class="card" href="Adaptations.pdf">
-          <div class="icon">📄</div>
-          <div class="name">Adaptations.pdf</div>
-        </a>
-      
-        <a class="card" href="BASICS OF ORGANIC EVOLUTION.pdf">
-          <div class="icon">📄</div>
-          <div class="name">BASICS OF ORGANIC EVOLUTION.pdf</div>
-        </a>
-      
-        <a class="card" href="BIOMETRY 17.pdf">
-          <div class="icon">📄</div>
-          <div class="name">BIOMETRY 17.pdf</div>
-        </a>
-      
-        <a class="card" href="chapter 22 - darwinian evol.pdf">
-          <div class="icon">📄</div>
-          <div class="name">chapter 22 - darwinian evol.pdf</div>
-        </a>
-      
-        <a class="card" href="chapter 23 - pop gen.pdf">
-          <div class="icon">📄</div>
-          <div class="name">chapter 23 - pop gen.pdf</div>
-        </a>
-      
-        <a class="card" href="chapter 24 - origin of species.pdf">
-          <div class="icon">📄</div>
-          <div class="name">chapter 24 - origin of species.pdf</div>
-        </a>
-      
-        <a class="card" href="chapter 25 - Tracing phylogeny.pdf">
-          <div class="icon">📄</div>
-          <div class="name">chapter 25 - Tracing phylogeny.pdf</div>
-        </a>
-      
-        <a class="card" href="chapter 26 - origin of life.pdf">
-          <div class="icon">📄</div>
-          <div class="name">chapter 26 - origin of life.pdf</div>
-        </a>
-      
-        <a class="card" href="chapter 27 - Prokaryotes and The Origins of Metabolic Diversity without.pdf">
-          <div class="icon">📄</div>
-          <div class="name">chapter 27 - Prokaryotes and The Origins of Metabolic Diversity without.pdf</div>
-        </a>
-      
-        <a class="card" href="chapter 28 - The Origins of Eukaryotic Diversity.pdf">
-          <div class="icon">📄</div>
-          <div class="name">chapter 28 - The Origins of Eukaryotic Diversity.pdf</div>
-        </a>
-      
-        <a class="card" href="chapter 29 - Plant Diversity I - The Colonization of Land.pdf">
-          <div class="icon">📄</div>
-          <div class="name">chapter 29 - Plant Diversity I - The Colonization of Land.pdf</div>
-        </a>
-      
-        <a class="card" href="chapter 30 - Plant Diversity II - The Evolution of Seed Plants.pdf">
-          <div class="icon">📄</div>
-          <div class="name">chapter 30 - Plant Diversity II - The Evolution of Seed Plants.pdf</div>
-        </a>
-      
-        <a class="card" href="chapter 31 - Fungi.pdf">
-          <div class="icon">📄</div>
-          <div class="name">chapter 31 - Fungi.pdf</div>
-        </a>
-      
-        <a class="card" href="chapter 32 - Introduction to Animal Evolution.pdf">
-          <div class="icon">📄</div>
-          <div class="name">chapter 32 - Introduction to Animal Evolution.pdf</div>
-        </a>
-      
-        <a class="card" href="chapter 33 - Invertebrates.pdf">
-          <div class="icon">📄</div>
-          <div class="name">chapter 33 - Invertebrates.pdf</div>
-        </a>
-      
-        <a class="card" href="chapter 34 - Vertebrate Evolution and Diversity.pdf">
-          <div class="icon">📄</div>
-          <div class="name">chapter 34 - Vertebrate Evolution and Diversity.pdf</div>
-        </a>
-      
-        <a class="card" href="COMPARATIVE ANATOMY.pdf">
-          <div class="icon">📄</div>
-          <div class="name">COMPARATIVE ANATOMY.pdf</div>
-        </a>
-      
-        <a class="card" href="EVOLUTION OF HORSE.pdf">
-          <div class="icon">📄</div>
-          <div class="name">EVOLUTION OF HORSE.pdf</div>
-        </a>
-      
-        <a class="card" href="EVOLUTION OF MAN.pdf">
-          <div class="icon">📄</div>
-          <div class="name">EVOLUTION OF MAN.pdf</div>
-        </a>
-      
-        <a class="card" href="Genetics Of Speciation.pdf">
-          <div class="icon">📄</div>
-          <div class="name">Genetics Of Speciation.pdf</div>
-        </a>
-      
-        <a class="card" href="GEOLOGICAL TIME SCALE.pdf">
-          <div class="icon">📄</div>
-          <div class="name">GEOLOGICAL TIME SCALE.pdf</div>
-        </a>
-      
-        <a class="card" href="How Populations Evolve, 13.pdf">
-          <div class="icon">📄</div>
-          <div class="name">How Populations Evolve, 13.pdf</div>
-        </a>
-      
-        <a class="card" href="Human evolution, 19.pdf">
-          <div class="icon">📄</div>
-          <div class="name">Human evolution, 19.pdf</div>
-        </a>
-      
-        <a class="card" href="LAMARCKISM, DARWINISM ANDOR6ANIC.pdf">
-          <div class="icon">📄</div>
-          <div class="name">LAMARCKISM, DARWINISM ANDOR6ANIC.pdf</div>
-        </a>
-      
-        <a class="card" href="Plants, 17.pdf">
-          <div class="icon">📄</div>
-          <div class="name">Plants, 17.pdf</div>
-        </a>
-      
-        <a class="card" href="The Evolution of Animal Diversity, 18.pdf">
-          <div class="icon">📄</div>
-          <div class="name">The Evolution of Animal Diversity, 18.pdf</div>
-        </a>
-      
-        <a class="card" href="The Origin and Evolution of Microbial Life, 16.pdf">
-          <div class="icon">📄</div>
-          <div class="name">The Origin and Evolution of Microbial Life, 16.pdf</div>
-        </a>
-      
-        <a class="card" href="The Origin of Species, 14.pdf">
-          <div class="icon">📄</div>
-          <div class="name">The Origin of Species, 14.pdf</div>
-        </a>
-      
-        <a class="card" href="Tracing Evolutionary History, 15.pdf">
-          <div class="icon">📄</div>
-          <div class="name">Tracing Evolutionary History, 15.pdf</div>
-        </a>
-      
+<a class="card" href="1. CHORDATA.pdf">
+  <div class="icon">📕</div>
+  <div class="name">1. CHORDATA.pdf</div>
+</a>
+<a class="card" href="2. FISHES.pdf">
+  <div class="icon">📕</div>
+  <div class="name">2. FISHES.pdf</div>
+</a>
+<a class="card" href="3. AMPHIBIA.pdf">
+  <div class="icon">📕</div>
+  <div class="name">3. AMPHIBIA.pdf</div>
+</a>
+<a class="card" href="4. REPTILIA.pdf">
+  <div class="icon">📕</div>
+  <div class="name">4. REPTILIA.pdf</div>
+</a>
+<a class="card" href="5. AVES.pdf">
+  <div class="icon">📕</div>
+  <div class="name">5. AVES.pdf</div>
+</a>
+<a class="card" href="6. MAMMALIA.pdf">
+  <div class="icon">📕</div>
+  <div class="name">6. MAMMALIA.pdf</div>
+</a>
+<a class="card" href="Adaptations.pdf">
+  <div class="icon">📕</div>
+  <div class="name">Adaptations.pdf</div>
+</a>
+<a class="card" href="BASICS OF ORGANIC EVOLUTION.pdf">
+  <div class="icon">📕</div>
+  <div class="name">BASICS OF ORGANIC EVOLUTION.pdf</div>
+</a>
+<a class="card" href="BIOMETRY 17.pdf">
+  <div class="icon">📕</div>
+  <div class="name">BIOMETRY 17.pdf</div>
+</a>
+<a class="card" href="chapter 22 - darwinian evol.pdf">
+  <div class="icon">📕</div>
+  <div class="name">chapter 22 - darwinian evol.pdf</div>
+</a>
+<a class="card" href="chapter 23 - pop gen.pdf">
+  <div class="icon">📕</div>
+  <div class="name">chapter 23 - pop gen.pdf</div>
+</a>
+<a class="card" href="chapter 24 - origin of species.pdf">
+  <div class="icon">📕</div>
+  <div class="name">chapter 24 - origin of species.pdf</div>
+</a>
+<a class="card" href="chapter 25 - Tracing phylogeny.pdf">
+  <div class="icon">📕</div>
+  <div class="name">chapter 25 - Tracing phylogeny.pdf</div>
+</a>
+<a class="card" href="chapter 26 - origin of life.pdf">
+  <div class="icon">📕</div>
+  <div class="name">chapter 26 - origin of life.pdf</div>
+</a>
+<a class="card" href="chapter 27 - Prokaryotes and The Origins of Metabolic Diversity without.pdf">
+  <div class="icon">📕</div>
+  <div class="name">chapter 27 - Prokaryotes and The Origins of Metabolic Diversity without.pdf</div>
+</a>
+<a class="card" href="chapter 28 - The Origins of Eukaryotic Diversity.pdf">
+  <div class="icon">📕</div>
+  <div class="name">chapter 28 - The Origins of Eukaryotic Diversity.pdf</div>
+</a>
+<a class="card" href="chapter 29 - Plant Diversity I - The Colonization of Land.pdf">
+  <div class="icon">📕</div>
+  <div class="name">chapter 29 - Plant Diversity I - The Colonization of Land.pdf</div>
+</a>
+<a class="card" href="chapter 30 - Plant Diversity II - The Evolution of Seed Plants.pdf">
+  <div class="icon">📕</div>
+  <div class="name">chapter 30 - Plant Diversity II - The Evolution of Seed Plants.pdf</div>
+</a>
+<a class="card" href="chapter 31 - Fungi.pdf">
+  <div class="icon">📕</div>
+  <div class="name">chapter 31 - Fungi.pdf</div>
+</a>
+<a class="card" href="chapter 32 - Introduction to Animal Evolution.pdf">
+  <div class="icon">📕</div>
+  <div class="name">chapter 32 - Introduction to Animal Evolution.pdf</div>
+</a>
+<a class="card" href="chapter 33 - Invertebrates.pdf">
+  <div class="icon">📕</div>
+  <div class="name">chapter 33 - Invertebrates.pdf</div>
+</a>
+<a class="card" href="chapter 34 - Vertebrate Evolution and Diversity.pdf">
+  <div class="icon">📕</div>
+  <div class="name">chapter 34 - Vertebrate Evolution and Diversity.pdf</div>
+</a>
+<a class="card" href="COMPARATIVE ANATOMY.pdf">
+  <div class="icon">📕</div>
+  <div class="name">COMPARATIVE ANATOMY.pdf</div>
+</a>
+<a class="card" href="EVOLUTION OF HORSE.pdf">
+  <div class="icon">📕</div>
+  <div class="name">EVOLUTION OF HORSE.pdf</div>
+</a>
+<a class="card" href="EVOLUTION OF MAN.pdf">
+  <div class="icon">📕</div>
+  <div class="name">EVOLUTION OF MAN.pdf</div>
+</a>
+<a class="card" href="Genetics Of Speciation.pdf">
+  <div class="icon">📕</div>
+  <div class="name">Genetics Of Speciation.pdf</div>
+</a>
+<a class="card" href="GEOLOGICAL TIME SCALE.pdf">
+  <div class="icon">📕</div>
+  <div class="name">GEOLOGICAL TIME SCALE.pdf</div>
+</a>
+<a class="card" href="How Populations Evolve, 13.pdf">
+  <div class="icon">📕</div>
+  <div class="name">How Populations Evolve, 13.pdf</div>
+</a>
+<a class="card" href="Human evolution, 19.pdf">
+  <div class="icon">📕</div>
+  <div class="name">Human evolution, 19.pdf</div>
+</a>
+<a class="card" href="LAMARCKISM, DARWINISM ANDOR6ANIC.pdf">
+  <div class="icon">📕</div>
+  <div class="name">LAMARCKISM, DARWINISM ANDOR6ANIC.pdf</div>
+</a>
+<a class="card" href="Plants, 17.pdf">
+  <div class="icon">📕</div>
+  <div class="name">Plants, 17.pdf</div>
+</a>
+<a class="card" href="The Evolution of Animal Diversity, 18.pdf">
+  <div class="icon">📕</div>
+  <div class="name">The Evolution of Animal Diversity, 18.pdf</div>
+</a>
+<a class="card" href="The Origin and Evolution of Microbial Life, 16.pdf">
+  <div class="icon">📕</div>
+  <div class="name">The Origin and Evolution of Microbial Life, 16.pdf</div>
+</a>
+<a class="card" href="The Origin of Species, 14.pdf">
+  <div class="icon">📕</div>
+  <div class="name">The Origin of Species, 14.pdf</div>
+</a>
+<a class="card" href="Tracing Evolutionary History, 15.pdf">
+  <div class="icon">📕</div>
+  <div class="name">Tracing Evolutionary History, 15.pdf</div>
+</a>
   </div>
 </body>
 </html>

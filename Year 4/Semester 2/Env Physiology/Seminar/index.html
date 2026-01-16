@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,301 +7,257 @@
 
 <style>
 :root {
-  --primary: #1e88e5;
   --bg: #f6f8fa;
   --card: #ffffff;
   --border: #e0e0e0;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
-  padding: 16px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  padding: 12px;
+  font-family: system-ui, -apple-system;
   background: var(--bg);
 }
 
-header {
-  margin-bottom: 16px;
-}
-
 h2 {
-  margin: 0;
-  font-size: 20px;
-  color: #222;
+  margin: 0 0 12px;
+  font-size: 18px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 12px;
+  grid-template-columns: 1fr;
+  gap: 8px;
 }
 
+/* Mobile list layout */
 .card {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-  padding: 16px 12px;
+  gap: 12px;
+  padding: 12px 14px;
   background: var(--card);
-  border-radius: 12px;
   border: 1px solid var(--border);
+  border-radius: 10px;
   text-decoration: none;
   color: #222;
-  transition: transform .15s ease, box-shadow .15s ease;
 }
 
 .card:active {
-  transform: scale(0.97);
-}
-
-.card:hover {
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  background: #f0f0f0;
 }
 
 .icon {
-  font-size: 36px;
-  margin-bottom: 8px;
+  font-size: 24px;
+  flex-shrink: 0;
 }
 
 .name {
-  font-size: 14px;
+  font-size: 15px;
   word-break: break-word;
 }
 
-@media (min-width: 768px) {
-  body {
-    padding: 24px;
+/* Grid cards on larger screens */
+@media (min-width: 640px) {
+  body { padding: 20px; }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+  }
+
+  .card {
+    flex-direction: column;
+    text-align: center;
+    padding: 16px 12px;
+  }
+
+  .icon {
+    font-size: 36px;
+    margin-bottom: 6px;
   }
 }
 </style>
 </head>
 
 <body>
-  <header>
-    <h2>Seminar</h2>
-  </header>
-
+  <h2>Seminar</h2>
   <div class="grid">
     
-        <a class="card" href="ENV PHYSIOLOGY PRESENTATION.pptx">
-          <div class="icon">📄</div>
-          <div class="name">ENV PHYSIOLOGY PRESENTATION.pptx</div>
-        </a>
-      
-        <a class="card" href="EXTREME AQUATIC ENVIRONMENT.pptx">
-          <div class="icon">📄</div>
-          <div class="name">EXTREME AQUATIC ENVIRONMENT.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 1.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 1.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 10.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 10.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 11.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 11.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 12.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 12.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 13.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 13.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 14.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 14.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 15.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 15.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 16- Cold Regions done-1.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 16- Cold Regions done-1.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 16.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 16.pptx</div>
-        </a>
-      
-        <a class="card" href="GROUP 17_.pptx">
-          <div class="icon">📄</div>
-          <div class="name">GROUP 17_.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 18.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 18.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 19.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 19.pptx</div>
-        </a>
-      
-        <a class="card" href="GROUP 2.pptx">
-          <div class="icon">📄</div>
-          <div class="name">GROUP 2.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 20.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 20.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 21.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 21.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 22.pdf">
-          <div class="icon">📄</div>
-          <div class="name">Group 22.pdf</div>
-        </a>
-      
-        <a class="card" href="Group 22.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 22.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 23.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 23.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 24.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 24.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 25.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 25.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 26.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 26.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 27.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 27.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 28.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 28.pptx</div>
-        </a>
-      
-        <a class="card" href="GROUP 29.pptx">
-          <div class="icon">📄</div>
-          <div class="name">GROUP 29.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 3.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 3.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 30.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 30.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 31.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 31.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 32.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 32.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 33.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 33.pptx</div>
-        </a>
-      
-        <a class="card" href="GROUP 33_EXTREME AQUATIC ENVIRONMENTS.pptx">
-          <div class="icon">📄</div>
-          <div class="name">GROUP 33_EXTREME AQUATIC ENVIRONMENTS.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 34.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 34.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 35_.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 35_.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 36.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 36.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 4.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 4.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 5.pdf">
-          <div class="icon">📄</div>
-          <div class="name">Group 5.pdf</div>
-        </a>
-      
-        <a class="card" href="Group 6.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 6.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 7.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 7.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 8.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 8.pptx</div>
-        </a>
-      
-        <a class="card" href="Group 9.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Group 9.pptx</div>
-        </a>
-      
-        <a class="card" href="Presentation1.pptx">
-          <div class="icon">📄</div>
-          <div class="name">Presentation1.pptx</div>
-        </a>
-      
-        <a class="card" href="THE DESERT REGION. GROUP 7-1.pptx">
-          <div class="icon">📄</div>
-          <div class="name">THE DESERT REGION. GROUP 7-1.pptx</div>
-        </a>
-      
+<a class="card" href="ENV PHYSIOLOGY PRESENTATION.pptx">
+  <div class="icon">📙</div>
+  <div class="name">ENV PHYSIOLOGY PRESENTATION.pptx</div>
+</a>
+<a class="card" href="EXTREME AQUATIC ENVIRONMENT.pptx">
+  <div class="icon">📙</div>
+  <div class="name">EXTREME AQUATIC ENVIRONMENT.pptx</div>
+</a>
+<a class="card" href="Group 1.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 1.pptx</div>
+</a>
+<a class="card" href="Group 10.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 10.pptx</div>
+</a>
+<a class="card" href="Group 11.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 11.pptx</div>
+</a>
+<a class="card" href="Group 12.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 12.pptx</div>
+</a>
+<a class="card" href="Group 13.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 13.pptx</div>
+</a>
+<a class="card" href="Group 14.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 14.pptx</div>
+</a>
+<a class="card" href="Group 15.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 15.pptx</div>
+</a>
+<a class="card" href="Group 16- Cold Regions done-1.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 16- Cold Regions done-1.pptx</div>
+</a>
+<a class="card" href="Group 16.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 16.pptx</div>
+</a>
+<a class="card" href="GROUP 17_.pptx">
+  <div class="icon">📙</div>
+  <div class="name">GROUP 17_.pptx</div>
+</a>
+<a class="card" href="Group 18.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 18.pptx</div>
+</a>
+<a class="card" href="Group 19.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 19.pptx</div>
+</a>
+<a class="card" href="GROUP 2.pptx">
+  <div class="icon">📙</div>
+  <div class="name">GROUP 2.pptx</div>
+</a>
+<a class="card" href="Group 20.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 20.pptx</div>
+</a>
+<a class="card" href="Group 21.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 21.pptx</div>
+</a>
+<a class="card" href="Group 22.pdf">
+  <div class="icon">📕</div>
+  <div class="name">Group 22.pdf</div>
+</a>
+<a class="card" href="Group 22.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 22.pptx</div>
+</a>
+<a class="card" href="Group 23.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 23.pptx</div>
+</a>
+<a class="card" href="Group 24.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 24.pptx</div>
+</a>
+<a class="card" href="Group 25.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 25.pptx</div>
+</a>
+<a class="card" href="Group 26.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 26.pptx</div>
+</a>
+<a class="card" href="Group 27.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 27.pptx</div>
+</a>
+<a class="card" href="Group 28.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 28.pptx</div>
+</a>
+<a class="card" href="GROUP 29.pptx">
+  <div class="icon">📙</div>
+  <div class="name">GROUP 29.pptx</div>
+</a>
+<a class="card" href="Group 3.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 3.pptx</div>
+</a>
+<a class="card" href="Group 30.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 30.pptx</div>
+</a>
+<a class="card" href="Group 31.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 31.pptx</div>
+</a>
+<a class="card" href="Group 32.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 32.pptx</div>
+</a>
+<a class="card" href="Group 33.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 33.pptx</div>
+</a>
+<a class="card" href="GROUP 33_EXTREME AQUATIC ENVIRONMENTS.pptx">
+  <div class="icon">📙</div>
+  <div class="name">GROUP 33_EXTREME AQUATIC ENVIRONMENTS.pptx</div>
+</a>
+<a class="card" href="Group 34.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 34.pptx</div>
+</a>
+<a class="card" href="Group 35_.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 35_.pptx</div>
+</a>
+<a class="card" href="Group 36.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 36.pptx</div>
+</a>
+<a class="card" href="Group 4.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 4.pptx</div>
+</a>
+<a class="card" href="Group 5.pdf">
+  <div class="icon">📕</div>
+  <div class="name">Group 5.pdf</div>
+</a>
+<a class="card" href="Group 6.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 6.pptx</div>
+</a>
+<a class="card" href="Group 7.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 7.pptx</div>
+</a>
+<a class="card" href="Group 8.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 8.pptx</div>
+</a>
+<a class="card" href="Group 9.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Group 9.pptx</div>
+</a>
+<a class="card" href="Presentation1.pptx">
+  <div class="icon">📙</div>
+  <div class="name">Presentation1.pptx</div>
+</a>
+<a class="card" href="THE DESERT REGION. GROUP 7-1.pptx">
+  <div class="icon">📙</div>
+  <div class="name">THE DESERT REGION. GROUP 7-1.pptx</div>
+</a>
   </div>
 </body>
 </html>
